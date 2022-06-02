@@ -19,6 +19,8 @@
 * Navigate to the cloned directory 
     - cd /usr/src/kodekloudrepos/apps
     - ll
+    - git status
+    - git branch -a
 
 * Add Remote repo as per the task 
     - git remote add dev_apps /opt/xfusioncorp_apps.git
@@ -28,9 +30,12 @@
     - ll
 
 * initialize the new remote repo  
-    - git init 
+    - git init
+    - git status
 
 * Add and commit the index.html file and also push the master branch to new remote origin.
     - git add index.html
+    - git status
     - git commit -m "index.html"
+    - git branch -a
     - git push -u dev_apps  master
