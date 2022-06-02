@@ -8,3 +8,7 @@
 - Limits: Memory: 20Mi, CPU: 100m
 
 - Note: The kubectl utility on jump_host has been configured to work with the kubernetes cluster.
+
+## SOLUTION
+* To run the pod.yml file:
+    - kubectl create -f pod.yml
