@@ -30,12 +30,12 @@ Note: Validation will try to run the playbook using command ansible-playbook -i 
     - ansible all -a "ls -ltr /opt/" -i inventory
     - vi playbook.yml
         ```bash
-        -   name: Ansible copy
-            hosts: all
-            become: yes
-            tasks:
-                - name: copy index.html to sysops folder
-                  copy: src=/usr/src/dba/index.html dest=/opt/dba
+        - name: Ansible copy
+          hosts: all
+          become: yes
+          tasks:
+            - name: copy index.html to security folder
+              copy: src=/usr/src/dba/index.html dest=/opt/dba
         ```
     - cat playbook.yml
 
