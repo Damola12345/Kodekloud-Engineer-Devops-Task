@@ -1,0 +1,12 @@
+- name: Extract archive
+  hosts: stapp01, stapp02, stapp03
+  become: yes
+  tasks:
+    - name: Extract the archive and set the owner/permissions
+      unarchive:
+        src: /usr/src/dba/devops.zip
+        dest: /opt/dba/
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: "0755"
+        

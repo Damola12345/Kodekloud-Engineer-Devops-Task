@@ -1,0 +1,25 @@
+- name: Extract archive
+  hosts: stapp01, stapp02, stapp03
+  become: yes
+  tasks:
+     - name: Install httpd
+       package:
+         name: httpd
+         state: present
+
+     - name: Start service httpd, if not started
+       service:
+         name: httpd
+         state: started
+
+     - name: Add content block in index.html and set permissions
+       blockinfile:
+         path: /var/www/html/index.html
+         create: yes
+         block: |
+           Welcome to XfusionCorp!
+           This is Nautilus sample file, created using Ansible!
+           Please do not modify this file manually!
+         owner: apache
+         group: apache
+         mode: "0644"

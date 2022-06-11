@@ -29,14 +29,6 @@ Note: Validation will try to run the playbook using command ansible-playbook -i 
 * Check the inventory file is working correctly by listing folder on all the app servers and also  Create a playbook as per the task
     - ansible all -a "ls -ltr /opt/" -i inventory
     - vi playbook.yml
-        ```bash
-        - name: Ansible copy
-          hosts: all
-          become: yes
-          tasks:
-            - name: copy index.html to security folder
-              copy: src=/usr/src/dba/index.html dest=/opt/dba
-        ```
     - cat playbook.yml
 
 * command to execute the playbook 

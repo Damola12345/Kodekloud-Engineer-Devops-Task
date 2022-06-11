@@ -29,19 +29,6 @@ Note: Validation will try to run the playbook using command ansible-playbook -i 
 
 * Create a playbook as per the task
     - vi playbook.yml
-        ```bash
-        - name: Extract archive
-          hosts: stapp01, stapp02, stapp03
-          become: yes
-          tasks:
-            - name: Extract the archive and set the owner/permissions
-              unarchive:
-                src: /usr/src/dba/devops.zip
-                dest: /opt/dba/
-                owner: "{{ ansible_user }}"
-                group: "{{ ansible_user }}"
-                mode: "0755"
-         ```
     - cat playbook.yml
 
 * command to execute the playbook 
