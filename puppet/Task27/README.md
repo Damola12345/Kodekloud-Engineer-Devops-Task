@@ -21,7 +21,7 @@ Notes: :- Please make sure to run the puppet agent test using sudo on agent node
 * Go through the folder mentioned in the task and create puppet files 
     - cd /etc/puppetlabs/code/environments/production/manifests/
 
-    - vi official.pp
+    - vi beta.pp
         ```bash
         class file_creator {
             file { '/opt/itadmin/beta.txt':
